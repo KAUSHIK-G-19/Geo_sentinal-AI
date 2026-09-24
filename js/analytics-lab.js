@@ -469,6 +469,8 @@ class AnalyticsLabEngine {
   }
 
   bindAiControls() {
+    this.checkPythonBackend();
+
     // Threshold slider
     const sliderThreshold = document.getElementById('sliderSvmThreshold');
     const lblThreshold = document.getElementById('lblSvmThreshold');
@@ -502,6 +504,24 @@ class AnalyticsLabEngine {
         this.exportAiReport();
       });
     }
+  }
+
+  checkPythonBackend() {
+    const statusBadge = document.getElementById('aiPipelineStatus');
+    fetch('/api/health')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.status === 'ONLINE' && statusBadge) {
+          statusBadge.textContent = 'PYTHON BACKEND: CONNECTED (Port 8000)';
+          statusBadge.className = 'status-tag tag-optimal';
+        }
+      })
+      .catch(() => {
+        if (statusBadge) {
+          statusBadge.textContent = 'EDGE CLIENT ENGINE: ACTIVE (100 Hz)';
+          statusBadge.className = 'status-tag tag-optimal';
+        }
+      });
   }
 
   /**
