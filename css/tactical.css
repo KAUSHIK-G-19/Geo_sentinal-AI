@@ -5547,3 +5547,205 @@ body.light-theme::before {
   font-weight: 700;
 }
 
+/* ==========================================================================
+   AI MULTI-MODEL INFERENCE SUITE (LSTM, ExtraTrees, 1D-Kalman SVM)
+   ========================================================================== */
+
+.ai-model-suite-card {
+  border-top: 2px solid var(--cyan-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-models-benchmark-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.ai-model-card {
+  background: rgba(9, 14, 24, 0.7);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.ai-model-card.breach-alert {
+  border-color: var(--red-alert);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+.ai-model-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.ai-model-name {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.ai-model-type {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--text-cyan);
+  background: var(--cyan-dim);
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.ai-model-stat-grid {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.ai-stat-box {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  padding: 5px 6px;
+  text-align: center;
+}
+
+.ai-stat-label {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  color: var(--text-muted);
+  display: block;
+  font-weight: 600;
+}
+
+.ai-stat-val {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  display: block;
+  margin-top: 2px;
+}
+
+.ai-model-pred-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+  padding: 6px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ai-prob-bar-wrap {
+  margin-top: 4px;
+}
+
+.ai-prob-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.ai-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ai-btn-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ai-action-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ai-action-btn.alert {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+.ai-action-btn.alert:hover {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.ai-action-btn.optimal {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border-color: rgba(16, 185, 129, 0.4);
+}
+.ai-action-btn.optimal:hover {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.ai-action-btn.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border-color: var(--border-dim);
+}
+.ai-action-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+}
+
+.ai-telemetry-readouts {
+  display: flex;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--cyan-primary);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border-dim);
+}
+
+/* Light theme overrides for AI suite */
+.light-theme .ai-model-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+.light-theme .ai-stat-box {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+.light-theme .ai-model-pred-status {
+  border-color: #f1f5f9;
+}
+.light-theme .ai-telemetry-readouts {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #0f172a;
+}
+
+

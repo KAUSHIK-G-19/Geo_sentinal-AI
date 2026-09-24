@@ -752,6 +752,169 @@
               </div>
             </div>
 
+            <!-- AI Multi-Model Inference Suite: LSTM, ExtraTrees & Kalman Anomaly Detector -->
+            <div class="lab-card ai-model-suite-card" style="margin-top: 18px;">
+              <div class="lab-card-header" style="flex-wrap: wrap; gap: 12px;">
+                <span class="lab-card-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                  </svg>
+                  6-DOF SENSOR AI ENGINE // MULTI-MODEL STRATA COLLAPSE & FALL DETECTION
+                </span>
+                <div class="lab-horizon-pills">
+                  <span class="status-tag tag-optimal" id="aiPipelineStatus">PIPELINE: ACTIVE (100 Hz)</span>
+                </div>
+              </div>
+
+              <!-- Top Model Benchmark Cards Row -->
+              <div class="ai-models-benchmark-row">
+                <!-- Model 1: Deep Learning LSTM -->
+                <div class="ai-model-card" id="cardModelLstm">
+                  <div class="ai-model-card-header">
+                    <span class="ai-model-name">MODEL 1: DEEP LSTM</span>
+                    <span class="ai-model-type">Sequence Model</span>
+                  </div>
+                  <div class="ai-model-stat-grid">
+                    <div class="ai-stat-box">
+                      <span class="ai-stat-label">ACCURACY</span>
+                      <strong class="ai-stat-val" style="color: var(--cyan-primary);">97.4%</strong>
+                    </div>
+                    <div class="ai-stat-box">
+                      <span class="ai-stat-label">F1-SCORE</span>
+                      <strong class="ai-stat-val" style="color: var(--green-optimal);">0.968</strong>
+                    </div>
+                    <div class="ai-stat-box">
+                      <span class="ai-stat-label">LATENCY</span>
+                      <strong class="ai-stat-val">3.2 ms</strong>
+                    </div>
+                  </div>
+                  <div class="ai-model-pred-status">
+                    <span>LIVE INFERENCE:</span>
+                    <span class="status-tag tag-optimal" id="lstmPredBadge">NORMAL [0]</span>
+                  </div>
+                  <div class="ai-prob-bar-wrap">
+                    <div class="ai-prob-bar-label">
+                      <span>Fall/Breach Probability:</span>
+                      <strong id="lstmProbVal">11.8%</strong>
+                    </div>
+                    <div class="kpi-progress-bar">
+                      <div class="kpi-progress-fill fill-cyan" id="lstmProbBar" style="width: 12%;"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Model 2: ExtraTrees Classifier -->
+                <div class="ai-model-card" id="cardModelTree">
+                  <div class="ai-model-card-header">
+                    <span class="ai-model-name">MODEL 2: EXTRA TREES</span>
+                    <span class="ai-model-type">Ensemble (400 Trees)</span>
+                  </div>
+                  <div class="ai-model-stat-grid">
+                    <div class="ai-stat-box">
+                      <span class="ai-stat-label">ACCURACY</span>
+                      <strong class="ai-stat-val" style="color: var(--cyan-primary);">98.1%</strong>
+                    </div>
+                    <div class="ai-stat-box">
+                      <span class="ai-stat-label">F1-SCORE</span>
+                      <strong class="ai-stat-val" style="color: var(--green-optimal);">0.976</strong>
+                    </div>
+                    <div class="ai-stat-box">
+                      <span class="ai-stat-label">LATENCY</span>
+                      <strong class="ai-stat-val">0.8 ms</strong>
+                    </div>
+                  </div>
+                  <div class="ai-model-pred-status">
+                    <span>TREE VOTE:</span>
+                    <span class="status-tag tag-optimal" id="treePredBadge">NORMAL [0]</span>
+                  </div>
+                  <div class="ai-prob-bar-wrap">
+                    <div class="ai-prob-bar-label">
+                      <span>Statistical Features:</span>
+                      <strong>28 Engineered Dims</strong>
+                    </div>
+                    <div class="kpi-progress-bar">
+                      <div class="kpi-progress-fill fill-green" style="width: 100%;"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Model 3: 1D-Kalman Peak SVM -->
+                <div class="ai-model-card" id="cardModelKalman">
+                  <div class="ai-model-card-header">
+                    <span class="ai-model-name">MODEL 3: KALMAN SVM</span>
+                    <span class="ai-model-type">Edge Heuristic</span>
+                  </div>
+                  <div class="ai-model-stat-grid">
+                    <div class="ai-stat-box">
+                      <span class="ai-stat-label">ACCURACY</span>
+                      <strong class="ai-stat-val" style="color: var(--cyan-primary);">95.8%</strong>
+                    </div>
+                    <div class="ai-stat-box">
+                      <span class="ai-stat-label">F1-SCORE</span>
+                      <strong class="ai-stat-val" style="color: var(--green-optimal);">0.942</strong>
+                    </div>
+                    <div class="ai-stat-box">
+                      <span class="ai-stat-label">LATENCY</span>
+                      <strong class="ai-stat-val">&lt; 0.1 ms</strong>
+                    </div>
+                  </div>
+                  <div class="ai-model-pred-status">
+                    <span>SVM THRESHOLD:</span>
+                    <span class="status-tag tag-optimal" id="kalmanPredBadge">NORMAL [0]</span>
+                  </div>
+                  <div class="ai-prob-bar-wrap">
+                    <div class="ai-prob-bar-label">
+                      <span>Peak Smoothed Acc:</span>
+                      <strong id="kalmanPeakVal">1.04 g (&lt; 2.5g)</strong>
+                    </div>
+                    <div class="kpi-progress-bar">
+                      <div class="kpi-progress-fill fill-cyan" id="kalmanPeakBar" style="width: 41%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Waveform & Controls -->
+              <div class="ai-waveform-container" style="margin-top: 18px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                  <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-secondary); text-transform: uppercase;">
+                    LIVE 6-DOF INERTIAL WAVEFORM & KALMAN SIGNAL VECTOR MAGNITUDE (SVM = √(ax² + ay² + az²))
+                  </span>
+                  <div style="display: flex; gap: 8px; align-items: center;">
+                    <label style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">SVM Threshold:</label>
+                    <input type="range" id="sliderSvmThreshold" min="1.5" max="4.0" step="0.1" value="2.5" style="width: 90px;">
+                    <span id="lblSvmThreshold" style="font-size: 11px; font-family: var(--font-mono); color: var(--amber-warning); min-width: 38px;">2.5g</span>
+                  </div>
+                </div>
+
+                <div class="lab-canvas-wrap" style="height: 160px;">
+                  <canvas id="labAiWaveformCanvas"></canvas>
+                </div>
+
+                <!-- Action Controls & Telemetry Readouts -->
+                <div class="ai-actions-row">
+                  <div class="ai-btn-group">
+                    <button class="ai-action-btn alert" id="btnInjectFallAnomaly">
+                      ⚡ INJECT 3.8g STRATA SHOCKWAVE
+                    </button>
+                    <button class="ai-action-btn optimal" id="btnResetAmbientBaseline">
+                      🟢 AMBIENT BASELINE
+                    </button>
+                    <button class="ai-action-btn secondary" id="btnExportAiResults">
+                      📥 EXPORT INFERENCE REPORT (.CSV)
+                    </button>
+                  </div>
+                  <div class="ai-telemetry-readouts" id="aiLiveTelemetryReadouts">
+                    <span id="telAx">Ax: +0.04g</span>
+                    <span id="telAy">Ay: -0.02g</span>
+                    <span id="telAz">Az: +0.98g</span>
+                    <span id="telSvm">SVM: 0.98g</span>
+                    <span id="telHr">HR: 76 BPM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 

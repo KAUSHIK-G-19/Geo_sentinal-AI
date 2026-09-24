@@ -6,3 +6,8 @@ geomesh-sentinel/
 .DS_Store
 Thumbs.db
 *.log
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.xlsx
